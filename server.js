@@ -1,7 +1,7 @@
 import WebSocket, { WebSocketServer } from 'ws';
 import { randomUUID } from 'crypto';
 const clients = new Map(); // has to be a Map instead of {} due to non-string keys
-const wss = new WebSocketServer({ port: 3030 }); 
+const wss = new WebSocketServer({ port: 8080 }); 
 
 
 wss.on('connection', (ws) => {
@@ -34,4 +34,4 @@ function serverBroadcast(message) {
         }
     });
 }
-console.log('The server is running and waiting for connections: 3030');
+console.log('The server is running and waiting for connections: 8080');
